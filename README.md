@@ -3,8 +3,6 @@
 
 ---
 Title: Introduction to CSS Grid<br>
-Type: Morning Exercise <br>
-    Course: SEIR-Avocado-Toast<br>
 Competencies: CSS, Grid<br>
 Prerequisites: HTML, CSS basics<br>
 Duration: 45 min

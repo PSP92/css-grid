@@ -239,6 +239,7 @@ That is all we are going to go over today, though Grid has many more useful feat
 [CSS Grid Changes EVERYTHING (YouTube)](https://www.youtube.com/watch?v=7kVeCqQCxlk)
 
 ["Grid Layout in CSS: Interface Layout for the Web" by Eric A. Meyer](http://file.allitebooks.com/20161222/Grid%20Layout%20in%20CSS.pdf)
-=======
-# css-grid
+
+
+
 

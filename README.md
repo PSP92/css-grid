@@ -19,6 +19,8 @@ CSS Grid Layout is a two-dimensional layout system (which means it includes both
 
 Grid is very useful when you need to customize your layout beyond the capabilities of floats, positioning and inline-block, or Flexbox. It is the most roboust layout system in CSS. You utilize Grid by applying CSS rules to both the parent (Grid Container) and the children (Grid Items).
 
+[CSS-TRICKS A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
 ### Can I use Grid?
 
 Grid is supported almost universally on modern browsers.

@@ -46,7 +46,7 @@ You can always check out [caniuse.com](http://caniuse.com/) and [shouldiprefix](
 ### Getting Started
 
 #### Starter-Code Directory
-- cd into the `starter code` folder
+- cd into the `starter_code` folder
 - vscode .
 - Inside there are two files `index.html` and `main.css`
 - `main.css` is the only file you will edit this morning

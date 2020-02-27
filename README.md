@@ -46,8 +46,8 @@ You can always check out [caniuse.com](http://caniuse.com/) and [shouldiprefix](
 ### Getting Started
 
 #### Starter-Code Directory
-- cd into w10d02 `morning_exercise` folder
-- atom .
+- cd into the `starter code` folder
+- vscode .
 - Inside there are two files `index.html` and `main.css`
 - `main.css` is the only file you will edit this morning
 - Open `index.html` in your browser

@@ -52,9 +52,8 @@ You can always check out [caniuse.com](http://caniuse.com/) and [shouldiprefix](
 - vscode .
 - Inside there are two files `index.html` and `main.css`
 - `main.css` is the only file you will edit this morning
-- Open `index.html` in your browser
+- Open `index.html` in `Firefox` as it has better support for CSS Grid
 
-*(Fun fact: Firefox includes a Grid Inspector, you can open it there if you have it - or you can check-out my example)*
 
 #### What we have to start with 
 ![](https://i.imgur.com/dziDSG5.png)

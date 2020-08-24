@@ -467,7 +467,7 @@ Since that worked so well let's also apply grid-gap to `.container`
 
 <img src="https://i.imgur.com/51hdOvc.png" width=500/>
 
-#### Flexbox and CSS Grid - Together
+### Flexbox and CSS Grid - Together
 
 Both Flexbox and CSS Grid are almost always used in tandem. As we already have mentioned Grid is for the overall layout and Flexbox for content. So let's add some content that you are familiar with such as a nav.
 

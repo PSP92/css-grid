@@ -95,7 +95,7 @@ Here are some of the terms we will need to understand when working with CSS Grid
 
 In today's build we will focus on building out a simple web site where we will `CSS Grid` to arrange the overall layout and then `Flexbox` for the content, which in this case is only the nav. The image on the right is being displayed via the `Firebox` DevTools provided.
 
-<img src="https://i.imgur.com/ss3tFpl.png" width=800/>
+<img src="https://i.imgur.com/59lYsPm.png" width=800/>
 
 ### Getting Started
 

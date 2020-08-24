@@ -129,7 +129,7 @@ Let's take a look at the body of the HTML as well so we can see the overall stru
     </header>
     <main class="main-content">
       <section class="section1">
-        <h2>Section #1</h2>
+        <h1>Section #1</h1>
         <p>This is where the main bulk of the document content would go.</p>
       </section>
       <section class="section2">

@@ -1,11 +1,13 @@
 ![](/ga_cog.png)
 
 ---
+
 Title: Introduction to CSS Grid<br>
 Author: Joe Keohan
 Competencies: CSS, Grid<br>
 Prerequisites: HTML, CSS basics<br>
 Duration: 45 min
+
 ---
 
 

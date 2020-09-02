@@ -6,7 +6,7 @@ Title: Introduction to CSS Grid<br>
 Author: Joe Keohan
 Competencies: CSS, Grid<br>
 Prerequisites: HTML, CSS basics<br>
-Duration: 90min min
+Duration: 90 - 120min
 
 ---
 

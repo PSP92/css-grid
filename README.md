@@ -6,10 +6,9 @@ Title: Introduction to CSS Grid<br>
 Author: Joe Keohan
 Competencies: CSS, Grid<br>
 Prerequisites: HTML, CSS basics<br>
-Duration: 45 min
+Duration: 90min min
 
 ---
-
 
 # CSS GRID
 
@@ -23,14 +22,14 @@ Although `CSS Grid` wasn't available until 2017 the concept of `grid` isn't new.
 
 ```html
 <div class="container">
-  <div class="row">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-  </div>
-  <div class="row">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-  </div>
+	<div class="row">
+		<div class="col">Column</div>
+		<div class="col">Column</div>
+	</div>
+	<div class="row">
+		<div class="col">Column</div>
+		<div class="col">Column</div>
+	</div>
 </div>
 ```
 
@@ -70,8 +69,8 @@ Below is an example of adding grid for al the browsers that support Grid and for
 
 ```css
 .grid-container {
-  display: -ms-grid;
-  display: grid;
+	display: -ms-grid;
+	display: grid;
 }
 ```
 
@@ -99,7 +98,9 @@ Here are some of the terms we will need to understand when working with CSS Grid
 
 ## Today's Build
 
-In today's build we will focus on building out a simple web site where we will `CSS Grid` to arrange the overall layout and then `Flexbox` for the content, which in this case is only the nav. The image on the right is being displayed via the `Firebox` DevTools provided.
+In today's build we will focus on building out a simple web site where we will `CSS Grid` to arrange the overall layout and then `Flexbox` for the content, which in this case is only the nav.
+
+The image on the right is being displayed via the `Firebox` DevTools. It provides much better support when working with CSS Grid and adds a Grid overlay to visualize the grid.
 
 <img src="https://i.imgur.com/59lYsPm.png" width=800/>
 
@@ -111,7 +112,7 @@ In today's build we will focus on building out a simple web site where we will `
 - open in vscode: `code .`
 - Inside there are three files `index.html`, `style-main.css` and `style-grid.css`
 - We will be working in `style-grid.css` to apply all CSS Grid settings
-- Open `index.html` in `Firefox` as it has better support for CSS Grid
+- Open `index.html` in `Firefox`
 
 You should see the following layout.
 
@@ -128,42 +129,44 @@ Let's take a look at the body of the HTML as well so we can see the overall stru
 
 ```html
 <body>
-  <div class="container">
-    <header>
-      <h2>Header</h2>
-      <p>This is where the logo and navigation would go.</p>
-    </header>
-    <main class="main-content">
-      <section class="section1">
-        <h1>Section #1</h1>
-        <p>This is where the main bulk of the document content would go.</p>
-      </section>
-      <section class="section2">
-        <h2>Section #2</h2>
-        <p>This element we use to organize more content</p>
-      </section>
-      <section class="section3">
-        <h2>Section #3</h2>
-        <p>This element we use to organize more content</p>
-      </section>
-      <aside class="sidebar sidebar1">
-        <h2>Aside #1</h2>
-        <p>The place where things of less relevance appears.</p>
-      </aside>
-      <aside class="sidebar sidebar2">
-        <h2>Aside #2</h2>
-        <p>The place where things of less relevance appears.</p>
-      </aside>
-    </main>
-    <footer class="footer-content">
-      <h2>Footer</h2>
-      <p>The place where site nav and other meta info typically appears.</p>
-    </footer>
-  </div>
+	<div class="container">
+		<header>
+			<h2>Header</h2>
+			<p>This is where the logo and navigation would go.</p>
+		</header>
+		<main class="main-content">
+			<section class="section1">
+				<h1>Section #1</h1>
+				<p>This is where the main bulk of the document content would go.</p>
+			</section>
+			<section class="section2">
+				<h2>Section #2</h2>
+				<p>This element we use to organize more content</p>
+			</section>
+			<section class="section3">
+				<h2>Section #3</h2>
+				<p>This element we use to organize more content</p>
+			</section>
+			<aside class="sidebar sidebar1">
+				<h2>Aside #1</h2>
+				<p>The place where things of less relevance appears.</p>
+			</aside>
+			<aside class="sidebar sidebar2">
+				<h2>Aside #2</h2>
+				<p>The place where things of less relevance appears.</p>
+			</aside>
+		</main>
+		<footer class="footer-content">
+			<h2>Footer</h2>
+			<p>The place where site nav and other meta info typically appears.</p>
+		</footer>
+	</div>
 </body>
 ```
 
-The one element that appears to contain all the key elements we will target is `.container` which is the same element that Bootstrap used to organize it's content. For our implementation this element does not need to be called `.container` but it does represent a naming convention used in front end web development and will make it easier for other front end devs to understand.
+The one element that appears to contain all the key elements we will target is `.container` which is the same element that Bootstrap used to organize it's content.
+
+For our implementation this element does not need to be called `.container` but it does represent a naming convention used in front end web development.
 
 ```html
 <div class="container"></div>
@@ -171,7 +174,11 @@ The one element that appears to contain all the key elements we will target is `
 
 #### Firefox DevTools
 
-Now open `DevTools` in `Firefox`. It uses the same shortcut keys as Chrome: `cmd + option + i`. Once it's open click on the `<div class="container">` element. We should see the following:
+Now open `DevTools` in `Firefox`. It uses the same shortcut keys as Chrome: `cmd + option + i`. 
+
+Once it's open click on the `<div class="container">` element in hte `Inspector`. 
+
+We should see the following:
 
 <img src="https://i.imgur.com/EfMVHEf.png" />
 
@@ -179,11 +186,15 @@ On the right side we can see that it provides specific support for Flexbox and G
 
 <img src="https://i.imgur.com/ZkM3b3R.png" width=300/>
 
-Since Grid has yet been applied there is no info to display. So let's get our Grid on!
+Since Grid has yet been applied there is no info to display. 
+
+So let's get our Grid on!
 
 #### Borders...Borders...Borders..
 
-Before we define any additional Grid settings let's turn on borders for all elements so we can clearly see their dimensions.
+Before we define any additional Grid settings let's turn on borders for all elements so we can clearly see their dimensions.  
+
+Add the following to `style-grid.css`.
 
 ```
 * {
@@ -203,17 +214,18 @@ Let's assign Grid to the `.container`. We must keep in mind only direct children
 }
 ```
 
-We should see that there is now some space between the footer and the last aside.
-
-<img src="https://i.imgur.com/9EKQD7D.png" width=500/>
-
 Firefox should also automatically update and we will see the following:
 
 <img src="https://i.imgur.com/Oisvv2u.png" width=400/>
 
+Now having worked with Flexbox already we might have assumed that Grid would have kicked in and applied some default settings which would have a direct affect on the child elements. Although Grid is now being applied it doesn't have the same effect as Flexbox.
+
+<img src="https://i.imgur.com/9EKQD7D.png" width=500/>
+
+
+
 ### Viewing Grid
 
-Now having worked with Flexbox already we might have assumed that Grid would have kicked in and applied some default settings which would have a direct affect on the child elements. Although Grid is now being applied it doesn't have the same effect as Flexbox.
 
 We've only turned on Grid and now it's waiting for us to define set columns and rows. Before we do so let's click on the all the available Grid settings.
 
@@ -235,8 +247,6 @@ Those numbers are important and we will use them as a reference later when we as
 - An **Implicit Grid** is formed when there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks.
 
 Since we haven't assigned any elements to columns or rows as of yet Grid is working in `Implicit Grid` mode where it is taking on the job of creating new rows for content.
-
-
 
 #### Assigning Rows and Columns
 
@@ -280,10 +290,9 @@ Ok so thats a little better but it seems like the heights aren't quite equal. Th
 
 <!-- <img src="https://i.imgur.com/tE0JCbC.png" width=500/> -->
 
-
 #### Using `auto`
 
-Grid has another way to guarantee that the `Header` and `Footer` are assigned only the height needed based on their content. We can assign those rows a value of `auto`. 
+Grid has another way to guarantee that the `Header` and `Footer` are assigned only the height needed based on their content. We can assign those rows a value of `auto`.
 
 ```
 .container {
@@ -353,7 +362,7 @@ Just like flexbox, child elements of a Flebox container are provided additional 
 - grid-row: 1 / 3 or 1 / span 2
 - grid-area: main or footer
 
-For this lecture we will only focus on `grid-row` and `grid-column`. 
+For this lecture we will only focus on `grid-row` and `grid-column`.
 
 #### Section #1
 
@@ -363,8 +372,8 @@ Let's see what that translates into using `grid-column` and `grid-row` where we 
 
 ```css
 .main-content .section1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
+	grid-column: 1 / 2;
+	grid-row: 1 / 4;
 }
 ```
 
@@ -374,8 +383,8 @@ Since the row is essentially spanning 3 rows we can also write it using the `spa
 
 ```css
 .main-content .section1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / span 3;
+	grid-column: 1 / 2;
+	grid-row: 1 / span 3;
 }
 ```
 
@@ -384,7 +393,7 @@ Since the row is essentially spanning 3 rows we can also write it using the `spa
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity
 
 - Take a moment to examine the final layout design
-- Based on that can you add the CSS to target those elements and put them in their place. 
+- Based on that can you add the CSS to target those elements and put them in their place.
 
 <hr>
 
@@ -395,34 +404,32 @@ Now that you had a chance to work through it on your own let's use the following
 <details>
 <summary>Solution</summary>
 
-
 ```css
 .main-content .section2 {
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
+	grid-column: 2 / 4;
+	grid-row: 1 / 2;
 }
 
 .main-content .section3 {
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
+	grid-column: 2 / 4;
+	grid-row: 2 / 3;
 }
 
 .main-content .sidebar1 {
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
 }
 
 .main-content .sidebar2 {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
 }
 ```
-
 
 </details>
 <br>
 
-Here is what it should look like now. 
+Here is what it should look like now.
 
 <img src="https://i.imgur.com/f7zhOHu.png"  width=500/>
 
@@ -453,10 +460,10 @@ Let's assign `grid-gap`.
 
 ```css
 .main-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
 }
 ```
 
@@ -464,10 +471,10 @@ Since that worked so well let's also apply grid-gap to `.container`
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-gap: 10px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-gap: 10px;
 }
 ```
 
@@ -481,7 +488,7 @@ Let's edit the Header element to comment out the existing code.
 
 ```html
 <header>
-  <!-- <h2>Header</h2>
+	<!-- <h2>Header</h2>
   <p>This is where the logo and navigation would go.</p> -->
 </header>
 ```
@@ -490,19 +497,19 @@ And now add the following navigation elements.
 
 ```html
 <header>
-  <!-- <h2>Header</h2>
+	<!-- <h2>Header</h2>
   <p>This is where the logo and navigation would go.</p> -->
-  <nav>
-    <img
-      src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png"
-    />
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-    </ul>
-  </nav>
+	<nav>
+		<img
+			src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png"
+		/>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+		</ul>
+	</nav>
 </header>
 ```
 
@@ -514,7 +521,7 @@ Now let's add some Flexbox. First we will target the `nav` and turn on flexbox.
 
 ```css
 nav {
-  display: flex;
+	display: flex;
 }
 ```
 
@@ -524,9 +531,9 @@ That doesn't look very appealing. Let's move the ul to the right using `justify-
 
 ```css
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 ```
 
@@ -534,7 +541,7 @@ That looks better. Now let's target the ul.
 
 ```css
 nav ul {
-  display: flex;
+	display: flex;
 }
 ```
 
@@ -546,7 +553,7 @@ Our last edit to css will be remove the borders around all the elements.
 
 ```css
 * {
-  /* border: 1px solid; */
+	/* border: 1px solid; */
 }
 ```
 

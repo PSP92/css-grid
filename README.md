@@ -39,7 +39,22 @@ Bootstrap is still one of the most widely used front end layout frameworks along
 
 [11 Best CSS Frameworks To Look Forward In 2020](https://www.lambdatest.com/blog/best-css-framework-2020/)
 
-**NOTE:** During project week Kenny will be doing a `Intro To Bootstrap` mini lecture. 
+**NOTE:** During Unit 1 project week Kenny will be doing a `Intro To Bootstrap` mini lecture. 
+
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min
+
+- Let's take a moment to examine one or two of the following sites in DevTools.
+- In the `Elements` tab use the shortcut keys `cmd + f` to open the search bar.
+- We will search for the keyword `container` to determine where it is used
+  - [https://mars.nasa.gov/](https://mars.nasa.gov/)
+  - [https://www.theknot.com/](https://www.theknot.com/)
+  - [https://www.algoexpert.io/product](https://www.algoexpert.io/product)]
+
+<img src="https://i.imgur.com/X9MjVLX.png">
+<hr>
+
 
 ### What is CSS Grid?
 

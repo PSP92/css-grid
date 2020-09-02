@@ -3,6 +3,23 @@
   padding:0;
 }
 
+body {
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  width: 1024px;
+  margin: 20px auto;
+  height: 90vh;
+}
+
+header,
+section,
+aside,
+footer {
+  padding: 1em;
+  color: white;
+}
+
 .container {
   height:100%;
 }
@@ -18,23 +35,6 @@ nav ul {
 nav ul li {
   padding: 20px;
   font-size: 24px;
-}
-
-body {
-  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  width: 1024px;
-  margin: 20px auto;
-  height: 90vh;
-}
-
-header,
-section,
-aside,
-.footer-content {
-  padding: 1em;
-  color: white;
 }
 
 header {
@@ -61,6 +61,6 @@ header {
   background-color: #ac8658;
 }
 
-.footer-content {
+footer {
   background-color: #0265c0;
 }

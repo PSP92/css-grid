@@ -16,7 +16,9 @@ Duration: 90 - 120min
 
 ## The Concept Of Grid
 
-Although `CSS Grid` wasn't available until 2017 the concept of `grid` isn't new. [Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/) was built on the concept of arranging content in rows and columns, essentially creating a grid. They use classes to define the rows/columns along with
+Although `CSS Grid` wasn't available until 2017 the concept of `grid` isn't new. [Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/) was built on  arranging content in rows and columns, essentially creating a grid. 
+
+They use classes such as `.container` to define the parent container and then `.row` and `.col` to define the rows/columns.
 
 <img src="https://i.imgur.com/1T7SgNe.png" />
 
@@ -36,6 +38,8 @@ Although `CSS Grid` wasn't available until 2017 the concept of `grid` isn't new.
 Bootstrap is still one of the most widely used front end layout frameworks along with `Foundation, Materialize, Semantic UI` and the list goes on. This article does a good job of discussing the pro's and con's of 11 of them, including the ones just mentioned.
 
 [11 Best CSS Frameworks To Look Forward In 2020](https://www.lambdatest.com/blog/best-css-framework-2020/)
+
+**NOTE:** During project week Kenny will be doing a `Intro To Bootstrap` mini lecture. 
 
 ### What is CSS Grid?
 
@@ -76,9 +80,9 @@ Below is an example of adding grid for al the browsers that support Grid and for
 
 ## Working With CSS Grid
 
-Grid is the most robust layout system in CSS. You utilize Grid by applying CSS rules to both the parent (Grid Container) and it's children (Grid Items), much like we did with Flexbox.
+Grid is the most robust layout system in CSS. You utilize Grid by applying CSS rules to both the parent `(Grid Container)` and it's children `(Grid Items)`, much like we did with Flexbox.
 
-During the lecture we will use [CSS-TRICKS A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) as our go to guide so let's spend a few minutes taking a look at the docs before moving on.
+During the lecture we will reference [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) as our go to guide so let's spend a few minutes taking a look at the docs before moving on.
 
 ### Basic Terminology
 
@@ -98,11 +102,11 @@ Here are some of the terms we will need to understand when working with CSS Grid
 
 ## Today's Build
 
-In today's build we will focus on building out a simple web site where we will `CSS Grid` to arrange the overall layout and then `Flexbox` for the content, which in this case is only the nav.
+For today's build we will focus on building out a simple web site where we will `CSS Grid` to arrange the overall layout and then `Flexbox` for the content, which in this case is only the nav.
 
 The image on the right is being displayed via the `Firebox` DevTools. It provides much better support when working with CSS Grid and adds a Grid overlay to visualize the grid.
 
-<img src="https://i.imgur.com/59lYsPm.png" width=800/>
+<img src="https://i.imgur.com/eB8b93V.png" width=800/>
 
 ### Getting Started
 
@@ -112,7 +116,8 @@ The image on the right is being displayed via the `Firebox` DevTools. It provide
 - open in vscode: `code .`
 - Inside there are three files `index.html`, `style-main.css` and `style-grid.css`
 - We will be working in `style-grid.css` to apply all CSS Grid settings
-- Open `index.html` in `Firefox`
+- Open `index.html` using `Live Server`
+- Copy the url and paste into `Firefox`
 
 You should see the following layout.
 
@@ -156,7 +161,7 @@ Let's take a look at the body of the HTML as well so we can see the overall stru
 				<p>The place where things of less relevance appears.</p>
 			</aside>
 		</main>
-		<footer class="footer-content">
+		<footer>
 			<h2>Footer</h2>
 			<p>The place where site nav and other meta info typically appears.</p>
 		</footer>
@@ -164,7 +169,7 @@ Let's take a look at the body of the HTML as well so we can see the overall stru
 </body>
 ```
 
-The one element that appears to contain all the key elements we will target is `.container` which is the same element that Bootstrap used to organize it's content.
+The one element that appears to contain all the key elements we will target is `.container` which is the same class name assigned to the element that Bootstrap uses to organize it's content.
 
 For our implementation this element does not need to be called `.container` but it does represent a naming convention used in front end web development.
 
@@ -208,7 +213,7 @@ Let's assign Grid to the `.container`. We must keep in mind only direct children
 
 **style-grid.css**
 
-```
+```css
 .container {
   display: grid;
 }
@@ -218,7 +223,9 @@ Firefox should also automatically update and we will see the following:
 
 <img src="https://i.imgur.com/Oisvv2u.png" width=400/>
 
-Now having worked with Flexbox already we might have assumed that Grid would have kicked in and applied some default settings which would have a direct affect on the child elements. Although Grid is now being applied it doesn't have the same effect as Flexbox.
+Now having worked with Flexbox already we might have assumed that Grid would have kicked in and applied some default settings which would have a direct and immediate visual affect on the child elements. 
+
+Although Grid is now being applied it doesn't have the same effect as Flexbox.
 
 <img src="https://i.imgur.com/9EKQD7D.png" width=500/>
 
@@ -227,11 +234,11 @@ Now having worked with Flexbox already we might have assumed that Grid would hav
 ### Viewing Grid
 
 
-We've only turned on Grid and now it's waiting for us to define set columns and rows. Before we do so let's click on the all the available Grid settings.
+We've only turned on Grid and now it's waiting for us to define set columns and rows to place our content.  Before we do so let's click on `div.container` to see the available Grid settings.
 
 <img src="https://i.imgur.com/MII5ISf.png" width=300/>
 
-We should see the following in the browser. By default Grid creates a single row and assigns all the immediate children their own row. We can see that this corresponds to `Header` - `Main` - `Footer`.
+We should see the following in the browser. By default Grid creates a single column and assigns all the immediate children to their own row. We can see that this corresponds to `Header` - `Main` - `Footer`.
 
 <!-- <img src="https://i.imgur.com/IPSjD67.png" width=500/> -->
 
@@ -281,7 +288,7 @@ Let's assign the rows `fr` units and see how that affects them.
 }
 ```
 
-Ok so thats a little better but it seems like the heights aren't quite equal. Thats because Grid is trying to respect that there is content in the `main` element and so to make them all equal height would mean some of the content would be cut off as it was when we used `%`.
+Ok so thats looks much better.  However Grid is now assigning just a bit more height to both the `Header` and `Footer` than they need.
 
 <img src="https://i.imgur.com/fx9e2b9.png" width=500/>
 
@@ -304,7 +311,9 @@ Grid has another way to guarantee that the `Header` and `Footer` are assigned on
 
 ### Nested Grids
 
-Assigning Grid to the container and defining the `rows/columns` really is enough to meet the first phase of the design. The main section will however require a bit more finesse in arranging the elements. Since Grid only has an effect on immediate children we need to add grid to the `.main-content` element as well.
+Assigning Grid to the container and defining the `rows/columns` really is enough to meet the first phase of the design. The main section will however require a bit more finesse in arranging the elements. 
+
+Since Grid only has an effect on immediate children we need to add grid to the `.main-content` element as well so that we can apply Grid there as well.
 
 ```
 .main-content {
@@ -314,7 +323,7 @@ Assigning Grid to the container and defining the `rows/columns` really is enough
 
 We should see that the elements expanded just a bit to take up the remaining space.
 
-In DevTools we can also sea that we can overlay Grid on the main element which we can turn on to see the Grid.
+In DevTools we can also see that we can overlay Grid on the main element as well.
 
 <img src="https://i.imgur.com/zK1Lgwm.png" />
 
@@ -379,7 +388,7 @@ Let's see what that translates into using `grid-column` and `grid-row` where we 
 
 <img src="https://i.imgur.com/eNGNjZu.png" width=500/>
 
-Since the row is essentially spanning 3 rows we can also write it using the `span` keyword.
+Since the element is essentially spanning 3 rows we can also write it using the `span` keyword.
 
 ```css
 .main-content .section1 {
@@ -390,10 +399,16 @@ Since the row is essentially spanning 3 rows we can also write it using the `spa
 
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min
 
 - Take a moment to examine the final layout design
-- Based on that can you add the CSS to target those elements and put them in their place.
+- Try and target the following elements in CSS and add the grid-column and grid-row values to move them into place:
+
+  - .section2
+  - .section3
+  - .sidebar1
+  - .sidebar2
+
 
 <hr>
 
@@ -441,12 +456,13 @@ So far so good. If we take a look at the final design we still need to create sp
 
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 10min
 
 - Take a moment to examine the layout above
 - Based on what you know about the `box model` how would you create the space between those elements.
-- Think about each element and write down you solution in a code snippet
-- When asked you will post that in a slack thread.
+- Target those elements in DevTools and add the css.  
+- Do not write the css in the css file. Only use DevTools
+- The Instructor will ask several students to share their screens and walk through the css
 
 <hr>
 
@@ -482,7 +498,9 @@ Since that worked so well let's also apply grid-gap to `.container`
 
 ### Flexbox and CSS Grid - Together
 
-Both Flexbox and CSS Grid are almost always used in tandem. As we already have mentioned Grid is for the overall layout and Flexbox for content. So let's add some content that you are familiar with such as a nav.
+Both Flexbox and CSS Grid are almost always used in tandem. As has already been mentioned Grid is use for the overall layout and Flexbox for content. 
+
+So let's add some content that you are familiar with such as a nav.
 
 Let's edit the Header element to comment out the existing code.
 

@@ -360,7 +360,10 @@ Based on the design it looks like there will be 3 columns and 3 rows. So let's a
 
 <img src="https://i.imgur.com/CmDE9Po.png" width=500/>
 
-SInce all of the rows are the same `fr` we can shorten that syntax using the `repeat` keyword.
+SInce all of the rows are the same `fr` we can shorten that syntax using the `repeat` keyword.  `repeat` takes in 2 values
+
+- `first:` how many rows or columns
+- `second:` the size for each of them
 
 ```
 .main-content {

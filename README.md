@@ -16,11 +16,11 @@ Duration: 90 - 120min
 
 ## The Concept Of Grid
 
-Although `CSS Grid` wasn't available until 2017 the concept of `grid` isn't new. [Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/) was built on  arranging content in rows and columns, essentially creating a grid. 
+Although `CSS Grid` wasn't available until 2017 the concept of using a **grid** pattern for layouts isn't new.
 
-They use classes such as `.container` to define the parent container and then `.row` and `.col` to define the rows/columns.
+[Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/) was built on arranging content in rows and columns, essentially creating a grid.
 
-<img src="https://i.imgur.com/1T7SgNe.png" />
+It uses classes such as **.container** to define the parent and then **.row** and **.col** to define the **rows/columns**.
 
 ```html
 <div class="container">
@@ -35,30 +35,35 @@ They use classes such as `.container` to define the parent container and then `.
 </div>
 ```
 
-Bootstrap is still one of the most widely used front end layout frameworks along with `Foundation, Materialize, Semantic UI` and the list goes on. This article does a good job of discussing the pro's and con's of 11 of them, including the ones just mentioned.
+The above code Would produce the following:
+
+<img src="https://i.imgur.com/1T7SgNe.png" />
+
+Bootstrap is still one of the most widely used front end layout frameworks along with **Foundation, Materialize, Semantic UI** and the list goes on.
+
+This article does a good job of discussing the pro's and con's of 11 of them, including the ones just mentioned.
 
 [11 Best CSS Frameworks To Look Forward In 2020](https://www.lambdatest.com/blog/best-css-framework-2020/)
 
-**NOTE:** During Unit 1 project week Kenny will be doing a `Intro To Bootstrap` mini lecture. 
-
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min - Examining Web Sites
 
-- Let's take a moment to examine one or two of the following sites in DevTools.
-- In the `Elements` tab use the shortcut keys `cmd + f` to open the search bar.
-- We will search for the keyword `container` to determine where it is used
+Let's take a moment to examine one or two of the following sites in DevTools.
+
+- In the **Elements** tab use the shortcut keys **cmd + f** to open the search bar.
+- We will search for the keyword **container** to determine where it is used
   - [https://mars.nasa.gov/](https://mars.nasa.gov/)
   - [https://www.theknot.com/](https://www.theknot.com/)
   - [https://www.algoexpert.io/product](https://www.algoexpert.io/product)]
 
 <img src="https://i.imgur.com/X9MjVLX.png">
-<hr>
 
+<hr>
 
 ### What is CSS Grid?
 
-So far we've been using `Flexbox` to arrange content. It's very powerful and something we will continue to work with even with the introduction of CSS Grid. It is however only `one-dimensional`.
+So far we've been using **Flexbox** to arrange content. It's very powerful and something we will continue to work with even with the introduction of **CSS Grid**. Flexbox, is however only **one-dimensional**.
 
 <img src="https://i.imgur.com/5NetjtO.png" width=500/>
 
@@ -70,7 +75,7 @@ Both `Flexbox` and `CSS Grid` almost always work together with `CSS Grid` being 
 
 <img src="https://i.imgur.com/zO6XljL.png" width=500/>
 
-### Can I use Grid?
+### Can I Use Grid?
 
 Yes as CSS Grid is supported on almost all modern browsers.
 
@@ -93,11 +98,17 @@ Below is an example of adding grid for al the browsers that support Grid and for
 }
 ```
 
+### Should I Use Grid?
+
+According to the [State Of CSS 2020 Survey](https://wptavern.com/state-of-css-2020-survey-results-tailwind-css-wins-most-adopted-technology-utility-first-css-on-the-rise) results yes you should and it even won the **Most Adopted Feature** award.
+
+> <img src="https://i.imgur.com/DiUP53J.png" >
+
 ## Working With CSS Grid
 
 Grid is the most robust layout system in CSS. You utilize Grid by applying CSS rules to both the parent `(Grid Container)` and it's children `(Grid Items)`, much like we did with Flexbox.
 
-During the lecture we will reference [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) as our go to guide so let's spend a few minutes taking a look at the docs before moving on.
+Let's take a look at [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) as we will use this as our reference going forward.
 
 ### Basic Terminology
 
@@ -117,9 +128,9 @@ Here are some of the terms we will need to understand when working with CSS Grid
 
 ## Today's Build
 
-For today's build we will focus on building out a simple web site where we will `CSS Grid` to arrange the overall layout and then `Flexbox` for the content, which in this case is only the nav.
+For today's build we will focus on building out a simple web site where we will **CSS Grid** to arrange the overall layout and then **Flexbox** for the content, which in this case is only the nav.
 
-The image on the right is being displayed via the `Firebox` DevTools. It provides much better support when working with CSS Grid and adds a Grid overlay to visualize the grid.
+The image on the right is being displayed via the **Firefox** DevTools. It provides much better support when working with CSS Grid and adds a Grid overlay to visualize the grid.
 
 <img src="https://i.imgur.com/eB8b93V.png" width=800/>
 
@@ -194,9 +205,9 @@ For our implementation this element does not need to be called `.container` but 
 
 #### Firefox DevTools
 
-Now open `DevTools` in `Firefox`. It uses the same shortcut keys as Chrome: `cmd + option + i`. 
+Now open `DevTools` in `Firefox`. It uses the same shortcut keys as Chrome: `cmd + option + i`.
 
-Once it's open click on the `<div class="container">` element in hte `Inspector`. 
+Once it's open click on the `<div class="container">` element in the `Inspector`.
 
 We should see the following:
 
@@ -206,13 +217,13 @@ On the right side we can see that it provides specific support for Flexbox and G
 
 <img src="https://i.imgur.com/ZkM3b3R.png" width=300/>
 
-Since Grid has yet been applied there is no info to display. 
+Since Grid has yet been applied there is no info to display.
 
 So let's get our Grid on!
 
 #### Borders...Borders...Borders..
 
-Before we define any additional Grid settings let's turn on borders for all elements so we can clearly see their dimensions.  
+Before we define any additional Grid settings let's turn on borders for all elements so we can clearly see their dimensions.
 
 Add the following to `style-grid.css`.
 
@@ -230,7 +241,7 @@ Let's assign Grid to the `.container`. We must keep in mind only direct children
 
 ```css
 .container {
-  display: grid;
+	display: grid;
 }
 ```
 
@@ -238,18 +249,15 @@ Firefox should also automatically update and we will see the following:
 
 <img src="https://i.imgur.com/Oisvv2u.png" width=400/>
 
-Now having worked with Flexbox already we might have assumed that Grid would have kicked in and applied some default settings which would have a direct and immediate visual affect on the child elements. 
+Now having worked with Flexbox already we might have assumed that Grid would have kicked in and applied some default settings which would have a direct and immediate visual affect on the child elements.
 
-Although Grid is now being applied it doesn't have the same effect as Flexbox.
+Although Grid is now being applied it doesn't have the same immediate effect as Flexbox.
 
 <img src="https://i.imgur.com/9EKQD7D.png" width=500/>
 
-
-
 ### Viewing Grid
 
-
-We've only turned on Grid and now it's waiting for us to define set columns and rows to place our content.  Before we do so let's click on `div.container` to see the available Grid settings.
+We've only turned on Grid and now it's waiting for us to define set columns and rows to place our content. Before we do so let's click on `div.container` to see the available Grid settings.
 
 <img src="https://i.imgur.com/MII5ISf.png" width=300/>
 
@@ -265,10 +273,14 @@ Those numbers are important and we will use them as a reference later when we as
 
 #### Explicit vs Implicit Grids
 
-- An **Explicit Grid** is when we manually define our grid using `grid-template-rows`, `grid-template-columns` and `grid-areas`.
+- An **Explicit Grid** is when we manually define our grid using:
+  - `grid-template-rows`
+  - `grid-template-columns`
+   - `grid-areas`
+
 - An **Implicit Grid** is formed when there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid, the grid container automatically generates grid tracks.
 
-Since we haven't assigned any elements to columns or rows as of yet Grid is working in `Implicit Grid` mode where it is taking on the job of creating new rows for content.
+Since we haven't assigned any elements to columns or rows as of yet Grid is working in **Implicit Grid** mode where it is taking on the job of creating new rows for content.
 
 #### Assigning Rows and Columns
 
@@ -303,7 +315,7 @@ Let's assign the rows `fr` units and see how that affects them.
 }
 ```
 
-Ok so thats looks much better.  However Grid is now assigning just a bit more height to both the `Header` and `Footer` than they need.
+Ok so thats looks much better. However Grid is now assigning just a bit more height to both the `Header` and `Footer` than they need.
 
 <img src="https://i.imgur.com/fx9e2b9.png" width=500/>
 
@@ -326,7 +338,7 @@ Grid has another way to guarantee that the `Header` and `Footer` are assigned on
 
 ### Nested Grids
 
-Assigning Grid to the container and defining the `rows/columns` really is enough to meet the first phase of the design. The main section will however require a bit more finesse in arranging the elements. 
+Assigning Grid to the container and defining the `rows/columns` really is enough to meet the first phase of the design. The main section will however require a bit more finesse in arranging the elements.
 
 Since Grid only has an effect on immediate children we need to add grid to the `.main-content` element as well so that we can apply Grid there as well.
 
@@ -360,7 +372,7 @@ Based on the design it looks like there will be 3 columns and 3 rows. So let's a
 
 <img src="https://i.imgur.com/CmDE9Po.png" width=500/>
 
-SInce all of the rows are the same `fr` we can shorten that syntax using the `repeat` keyword.  `repeat` takes in 2 values
+SInce all of the rows are the same `fr` we can shorten that syntax using the `repeat` keyword. `repeat` takes in 2 values
 
 - `first:` how many rows or columns
 - `second:` the size for each of them
@@ -427,7 +439,6 @@ Since the element is essentially spanning 3 rows we can also write it using the 
   - .sidebar1
   - .sidebar2
 
-
 <hr>
 
 #### Remaining Elements
@@ -477,10 +488,12 @@ So far so good. If we take a look at the final design we still need to create sp
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 10min
 
 - Take a moment to examine the layout above
-- Based on what you know about the `box model` how would you create the space between those elements.
-- Target those elements in DevTools and add the css.  
+- Based on what you know about **padding** and **margin** how would you create the space between those elements.
+- Target those elements in DevTools and play with a few CSS settings
 - Do not write the css in the css file. Only use DevTools
-- The Instructor will ask several students to share their screens and walk through the css
+
+
+The Instructor will ask several students to share their screens and walk through the css
 
 <hr>
 
@@ -516,7 +529,7 @@ Since that worked so well let's also apply grid-gap to `.container`
 
 ### Flexbox and CSS Grid - Together
 
-Both Flexbox and CSS Grid are almost always used in tandem. As has already been mentioned Grid is use for the overall layout and Flexbox for content. 
+Both Flexbox and CSS Grid are almost always used in tandem. As has already been mentioned Grid is use for the **overall layout** and Flexbox for **content**.
 
 So let's add some content that you are familiar with such as a nav.
 
@@ -552,6 +565,8 @@ And now add the following navigation elements.
 The Header should now look like this.
 
 <img src="https://i.imgur.com/B9bVjIT.png" width=400/>
+
+#### Turn On Flexbox
 
 Now let's add some Flexbox. First we will target the `nav` and turn on flexbox.
 
